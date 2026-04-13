@@ -123,7 +123,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
         "max_tokens": 8192,
     }
 
-    models_to_try = [MODEL_NAME, "glm-4-plus", "glm-4-flash", "glm-4"]
+    models_to_try = [MODEL_NAME, "glm-4-flash", "glm-4-plus", "glm-4"]
 
     for model in models_to_try:
         payload["model"] = model
@@ -137,7 +137,7 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
                     f"{API_BASE}/chat/completions",
                     headers=headers,
                     json=payload,
-                    timeout=120,
+                    timeout=180,
                 )
                 if resp.status_code == 429:
                     wait = 60 * (attempt + 1)
