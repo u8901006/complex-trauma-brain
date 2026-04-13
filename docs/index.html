@@ -3,29 +3,61 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Complex Trauma Brain</title>
+<title>Complex Trauma Brain · 心理創傷文獻日報</title>
 <style>
-  :root { --bg: #f0f4f3; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; }
-  body { background: var(--bg); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-  .container { text-align: center; padding: 40px; }
-  .logo { font-size: 64px; margin-bottom: 20px; }
-  h1 { font-size: 28px; margin-bottom: 12px; }
-  p { color: var(--muted); font-size: 15px; line-height: 1.8; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; }
+  .container { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 80px 24px; }
+  .logo { font-size: 48px; text-align: center; margin-bottom: 16px; }
+  h1 { text-align: center; font-size: 24px; color: var(--text); margin-bottom: 8px; }
+  .subtitle { text-align: center; color: var(--accent); font-size: 14px; margin-bottom: 8px; }
+  .description { text-align: center; color: var(--muted); font-size: 13px; margin-bottom: 48px; line-height: 1.6; }
+  .count { text-align: center; color: var(--muted); font-size: 13px; margin-bottom: 32px; }
+  ul { list-style: none; }
+  li { margin-bottom: 8px; }
+  a { color: var(--text); text-decoration: none; display: block; padding: 14px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: all 0.2s; font-size: 15px; }
+  a:hover { background: var(--accent-soft); border-color: var(--accent); transform: translateX(4px); }
+  .clinic-links { margin-top: 40px; display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+  .clinic-link:hover { background: var(--accent-soft); border-color: var(--accent); }
+  .clinic-icon { font-size: 24px; }
+  .clinic-info { flex: 1; }
+  .clinic-name { font-size: 14px; font-weight: 600; }
+  .clinic-desc { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  footer { margin-top: 40px; text-align: center; font-size: 12px; color: var(--muted); }
+  footer a { display: inline; padding: 0; background: none; border: none; color: var(--muted); }
+  footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="logo">\U0001f9e0</div>
+  <div class="logo">🧠</div>
   <h1>Complex Trauma Brain</h1>
-  <p>心理創傷、複雜性創傷與解離領域文獻日報</p>
-  <p>每日自動從 PubMed 彙整最新研究，由 AI 分析整理</p>
-  <p style="margin-top: 32px; font-size: 13px;">報告即將產生，請稍後再訪。<br/>可手動觸發 <a href="https://github.com/u8901006/complex-trauma-brain/actions">GitHub Actions</a> 產生首份報告。</p>
-  <div style="margin-top: 32px;">
-    <a href="https://www.leepsyclinic.com/" style="margin-right: 20px;">李政洋身心診所</a>
-    <a href="https://blog.leepsyclinic.com/">訂閱電子報</a>
+  <p class="subtitle">心理創傷、複雜性創傷與解離領域文獻日報</p>
+  <p class="description">每日自動從 PubMed 彙整最新心理創傷、CPTSD、解離、<br/>童年創傷相關研究，由 AI 分析整理</p>
+  <p class="count">共 1 份報告</p>
+  <ul><li><a href="complex-trauma-2026-04-13.html">📅 2026年4月13日（週一）</a></li>
+</ul>
+  <div class="clinic-links">
+    <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+      <span class="clinic-icon">🏥</span>
+      <div class="clinic-info">
+        <div class="clinic-name">李政洋身心診所首頁</div>
+        <div class="clinic-desc">專業身心科門診服務</div>
+      </div>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+      <span class="clinic-icon">📨</span>
+      <div class="clinic-info">
+        <div class="clinic-name">訂閱電子報</div>
+        <div class="clinic-desc">定期接收最新心理健康資訊</div>
+      </div>
+    </a>
   </div>
+  <footer>
+    <p>Powered by PubMed + Zhipu AI · <a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></p>
+  </footer>
 </div>
 </body>
 </html>
