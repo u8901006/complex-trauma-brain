@@ -5,6 +5,7 @@ Targets trauma, dissociation, child maltreatment, and interpersonal violence jou
 """
 
 import json
+import os
 import sys
 import argparse
 import xml.etree.ElementTree as ET
@@ -154,6 +155,44 @@ def fetch_details(pmids: list[str]) -> list[dict]:
     return papers
 
 
+def load_reported_pmids(seen_file: str, keep_days: int = 7) -> set[str]:
+    if not os.path.exists(seen_file):
+        return set()
+    try:
+        with open(seen_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return set()
+    cutoff = (
+        datetime.now(timezone(timedelta(hours=8))) - timedelta(days=keep_days)
+    ).strftime("%Y-%m-%d")
+    pmids = set()
+    for date_key, id_list in data.items():
+        if date_key >= cutoff:
+            pmids.update(id_list)
+    return pmids
+
+
+def save_reported_pmids(
+    seen_file: str, date_str: str, new_pmids: list[str], keep_days: int = 7
+):
+    data = {}
+    if os.path.exists(seen_file):
+        try:
+            with open(seen_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            pass
+    cutoff = (
+        datetime.now(timezone(timedelta(hours=8))) - timedelta(days=keep_days)
+    ).strftime("%Y-%m-%d")
+    data = {k: v for k, v in data.items() if k >= cutoff}
+    data[date_str] = new_pmids
+    os.makedirs(os.path.dirname(seen_file) or ".", exist_ok=True)
+    with open(seen_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Fetch complex trauma papers from PubMed"
@@ -164,6 +203,7 @@ def main():
     )
     parser.add_argument("--output", default="-", help="Output file (- for stdout)")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
+    parser.add_argument("--seen", default="", help="Reported PMIDs JSON file for dedup")
     args = parser.parse_args()
 
     query = build_query(days=args.days)
@@ -173,7 +213,16 @@ def main():
     )
 
     pmids = search_papers(query, retmax=args.max_papers)
-    print(f"[INFO] Found {len(pmids)} papers", file=sys.stderr)
+    print(f"[INFO] Found {len(pmids)} papers from PubMed", file=sys.stderr)
+
+    reported = load_reported_pmids(args.seen) if args.seen else set()
+    if reported:
+        before = len(pmids)
+        pmids = [p for p in pmids if p not in reported]
+        print(
+            f"[INFO] Dedup: {before} -> {len(pmids)} (removed {before - len(pmids)} already reported)",
+            file=sys.stderr,
+        )
 
     if not pmids:
         print("NO_CONTENT", file=sys.stderr)
@@ -195,6 +244,13 @@ def main():
 
     papers = fetch_details(pmids)
     print(f"[INFO] Fetched details for {len(papers)} papers", file=sys.stderr)
+
+    if args.seen:
+        today = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+        save_reported_pmids(
+            args.seen, today, [p["pmid"] for p in papers if p.get("pmid")]
+        )
+        print(f"[INFO] Updated reported PMIDs file: {args.seen}", file=sys.stderr)
 
     output_data = {
         "date": datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d"),
