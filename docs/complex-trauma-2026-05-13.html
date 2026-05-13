@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年5月13日</title>
+<meta name="description" content="2026年5月13日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年5月13日</span>
+        <span class="badge badge-count">📚 16 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日創傷與解離領域的研究聚焦於創傷對大腦結構與功能的影響，以及創傷治療的有效性。同時，對於童年創傷、人際創傷和疏忽等創傷類型的影響也進行了深入探索。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🔍</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>從 retina 到證據：兒童被虐待頭頸傷害眼部發現的證據到結果譜系。</h3>
+          <p class="journal-source">Forensic science, medicine, and pathology &middot; From retina to proof: an evidence-to-outcome pipeline for pediatric eye findings in suspected abusive head trauma.</p>
+          <p>本研究建立了一個從證據到結果的譜系，對於疑似被虐待頭頸傷害的兒童眼部發現進行了深入分析，提供了重要的法醫病理學實證。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">疑似被虐待頭頸傷害的兒童</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">眼部結構與功能分析</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">正常兒童</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">眼部發現與被虐待頭頸傷害的關聯性</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">兒童虐待</span><span class="tag">眼部發現</span><span class="tag">證據到結果譜系</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120662/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>近期創傷曝露與 V1 區域厚度增加的關聯：發現與重複分析。</h3>
+          <p class="journal-source">Biological psychiatry. Cognitive neuroscience and neuroimaging &middot; Recent trauma exposure is associated with greater thickness of area V1: a discovery and replication analysis.</p>
+          <p>研究发现近期創傷曝露與視覺皮層 V1 區域的厚度增加有關，並可能與創傷後壓力障礙症（PTSD）的發展有關。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">近期創傷曝露的人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">視覺皮層結構測量</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未經創傷曝露的人</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">V1 區域厚度與 PTSD 的關係</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">視覺皮層</span><span class="tag">創傷曝露</span><span class="tag">V1 區域</span><span class="tag">PTSD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119942/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">👶</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>童年經歷的正面與負面事件與成人健康與經濟成果。</h3>
+          <p class="journal-source">Pediatrics &middot; Positive and Adverse Childhood Experiences and Adult Health and Economic Outcomes.</p>
+          <p>研究發現童年經歷的正面事件與成人健康和經濟成果有關，並且正面事件在存在負面事件時仍能產生積極影響。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">成人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">童年經歷的正面與負面事件的評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">正面事件與負面事件</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">成人健康與經濟成果</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年經歷</span><span class="tag">正面事件</span><span class="tag">負面事件</span><span class="tag">成人健康</span><span class="tag">經濟成果</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120051/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">👨‍⚕️</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>近期創傷與負面童年經歷與成年健康與經濟成果。</h3>
+          <p class="journal-source">Pediatrics &middot; Recent trauma exposure and adverse childhood experiences and adult health and economic outcomes.</p>
+          <p>研究發現近期創傷與負面童年經歷與成年健康與經濟成果之間有關聯，並且近期創傷可能加劇這些關聯。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">成年</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">近期創傷與負面童年經歷的評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">近期創傷與負面童年經歷</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">成年健康與經濟成果</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">近期創傷</span><span class="tag">負面童年經歷</span><span class="tag">成年健康</span><span class="tag">經濟成果</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120051/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">💔</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>解離性身分疾患中的同情心概況：從人本角度解釋情緒調節和心病理。</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Empathy profiles in posttraumatic stress disorder: A person-centered approach to understanding emotion dysregulation and psychopathology.</p>
+          <p>本研究從人本角度分析了解離性身分疾患中的同情心概況，並探讨了同情心與情緒調節和心病理之間的關係。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">解離性身分疾患患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">同情心概況的評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無創傷患者</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">同情心與情緒調節、心病理的關係</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">解離性身分疾患</span><span class="tag">同情心</span><span class="tag">情緒調節</span><span class="tag">心病理</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119903/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🗣️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>評論：與心理健康工作者一起工作的翻譯員（第2版）。</h3>
+          <p class="journal-source">Clinical child psychology and psychiatry</p>
+          <p>評論了與心理健康工作者一起工作的翻譯員的重要性，並強調了翻譯員在促進療效和照護質量方面的作用。</p>
+          <div class="card-footer">
+            <span class="tag">文化適應性實踐</span><span class="tag">翻譯員</span><span class="tag">心理健康</span><span class="tag">治療聯盟</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120993/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔬</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>動態免於和代謝失調在女性创伤後壓力障礙症患者中的影響：性侵後長期轉錄組研究的洞察。</h3>
+          <p class="journal-source">Molecular psychiatry</p>
+          <p>研究了女性創傷後壓力障礙症患者中免疫和代謝失調的動態，並揭示了性侵後長期轉錄組變化的洞察。</p>
+          <div class="card-footer">
+            <span class="tag">創傷後壓力障礙症</span><span class="tag">免疫和代謝失調</span><span class="tag">性侵</span><span class="tag">轉錄組學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120554/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🩺</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>NG101治療引發脊髓損傷後脊髓微结构与宏結構的變化。</h3>
+          <p class="journal-source">Nature communications</p>
+          <p>研究了NG101治療對脊髓損傷後脊髓微结构与宏結構的影響，並表明NG101治療可能促進神經修復和上肢運動功能。</p>
+          <div class="card-footer">
+            <span class="tag">脊髓損傷</span><span class="tag">NG101治療</span><span class="tag">神經修復</span><span class="tag">MRI生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120375/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🩺</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>抗-Nogo-A NG101治療引發脊髓損傷後脊髓微结构与宏結構的變化。</h3>
+          <p class="journal-source">Nature communications</p>
+          <p>研究了NG101治療對脊髓損傷後脊髓微结构与宏結構的影響，並表明NG101治療可能促進神經修復和上肢運動功能。</p>
+          <div class="card-footer">
+            <span class="tag">脊髓損傷</span><span class="tag">NG101治療</span><span class="tag">神經修復</span><span class="tag">MRI生物標記</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120375/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👨‍⚕️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>近期創傷與負面童年經歷與成年健康與經濟成果。</h3>
+          <p class="journal-source">Pediatrics</p>
+          <p>研究發現近期創傷與負面童年經歷與成年健康與經濟成果之間有關聯，並且近期創傷可能加劇這些關聯。</p>
+          <div class="card-footer">
+            <span class="tag">近期創傷</span><span class="tag">負面童年經歷</span><span class="tag">成年健康</span><span class="tag">經濟成果</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42120051/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💔</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>解離性身分疾患中的同情心概況：從人本角度解釋情緒調節和心病理。</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>本研究從人本角度分析了解離性身分疾患中的同情心概況，並探讨了同情心與情緒調節和心病理之間的關係。</p>
+          <div class="card-footer">
+            <span class="tag">解離性身分疾患</span><span class="tag">同情心</span><span class="tag">情緒調節</span><span class="tag">心病理</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119903/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👪</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>近親代際傳承的創傷經歷對子女憂鬱和焦慮症狀的影響：父母照護因素的調節作用。</h3>
+          <p class="journal-source">Child abuse & neglect</p>
+          <p>研究發現父母的創傷經歷與子女的憂鬱和焦慮症狀之間有關聯，並且父母照護因素在這種關係中起著調節作用。</p>
+          <div class="card-footer">
+            <span class="tag">近親代際傳承</span><span class="tag">創傷經歷</span><span class="tag">憂鬱</span><span class="tag">焦慮</span><span class="tag">照護因素</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119281/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏷️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>被監禁 twice：童年創傷在監獄康復中的作用。</h3>
+          <p class="journal-source">Child abuse & neglect</p>
+          <p>研究探討了監獄康復過程中對童年創傷的 minimize 和 deny，並分析了這對康復過程的影響。</p>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">監獄康復</span><span class="tag"> minimize 和 deny</span><span class="tag"> 康復過程</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119280/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>SVEAT 與 HEART 分數在避免不必要的冠狀動脈參考中的比較。</h3>
+          <p class="journal-source">Heart & lung : the journal of critical care</p>
+          <p>研究了SVEAT和HEART分數在避免不需要的冠狀動脈參考方面的效果，並表明SVEAT分數具有更高的特異性和準確性。</p>
+          <div class="card-footer">
+            <span class="tag">冠狀動脈危險分數</span><span class="tag">胸痛</span><span class="tag">急診部</span><span class="tag">冠狀動脈參考</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119270/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>頭部受傷作為肌萎縮性側索硬化症的風險因素：系統性综述和元分析。</h3>
+          <p class="journal-source">Clinical neurology and neurosurgery</p>
+          <p>系統性综述和元分析發現頭部受傷與肌萎縮性側索硬化症之間有關聯。</p>
+          <div class="card-footer">
+            <span class="tag">頭部受傷</span><span class="tag">肌萎縮性側索硬化症</span><span class="tag">風險因素</span><span class="tag">系統性综述</span><span class="tag">元分析</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119241/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💤</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>使用 SHAP 模型解釋地震後兒童睡眠障礙：容器城市建模。</h3>
+          <p class="journal-source">Journal of pediatric nursing</p>
+          <p>使用機器學習模型預測地震後居住在容器城市中的兒童睡眠障礙的因素。</p>
+          <div class="card-footer">
+            <span class="tag">地震</span><span class="tag">兒童睡眠障礙</span><span class="tag">機器學習</span><span class="tag">容器城市</span><span class="tag">SHAP 模型</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42119238/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">複雜性創傷/CPTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">創傷</span><span class="keyword">解離</span><span class="keyword">童年創傷</span><span class="keyword">PTSD</span><span class="keyword">CPTSD</span><span class="keyword">創傷治療</span><span class="keyword">情感調節</span><span class="keyword">解離性疾患</span><span class="keyword">失自我感</span><span class="keyword">失真實感</span><span class="keyword">解離性身分疾患</span><span class="keyword">人際創傷</span><span class="keyword">家庭暴力</span><span class="keyword">創傷知情照護</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5.1</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
