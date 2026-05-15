@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年5月15日</title>
+<meta name="description" content="2026年5月15日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年5月15日</span>
+        <span class="badge badge-count">📚 16 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日創傷與解離領域的文獻主要關注於童年創傷與發展性創傷的影響，以及創傷治療的進展，特別是關於治療效果和治療方法的研究。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🔍</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>後創傷壓力症候群（PTSD）與解離性疾患：兩個疾病的共病特點及其治療</h3>
+          <p class="journal-source">Journal of trauma & dissociation &middot; Comorbidity of Post-traumatic Stress Disorder (PTSD) and Dissociative Disorders: Common Features and Treatment</p>
+          <p>本研究的目的是調查後創傷壓力症候群（PTSD）與解離性疾患之間的共病特點，並探討這些疾病的治療方法。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">患有後創傷壓力症候群（PTSD）和/或解離性疾患的患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">治療方法，包括心理治療、藥物治療和其他相關介入措施</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同治療方法的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">治療效果和患者的生活質量</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">解離</span><span class="tag">創傷治療</span><span class="tag">治療效果</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135320/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">📊</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>童年創傷與成年後的發展性創傷：一個系統性評估</h3>
+          <p class="journal-source">Child abuse & neglect &middot; Childhood Trauma and Developmental Trauma in Adulthood: A Systematic Review</p>
+          <p>本研究進行了一個系統性評估，以了解童年創傷與成年後發展性創傷之間的關係。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">童年創傷的受歷者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">沒有特別的介入措施，僅為評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">童年創傷與成年後發展性創傷的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">發展性創傷的發生率、特點和影響</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">發展性創傷</span><span class="tag">ACEs</span><span class="tag">累積性創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135015/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🛠️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>創傷知情照護在治療創傷後壓力症候群（PTSD）中的角色</h3>
+          <p class="journal-source">Journal of trauma & dissociation &middot; The Role of Trauma-Informed Care in Treating Post-traumatic Stress Disorder (PTSD)</p>
+          <p>本研究探討了創傷知情照護在治療創傷後壓力症候群（PTSD）中的重要性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">創傷後壓力症候群的受歷者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">創傷知情照護的介入措施</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">創傷知情照護與其他照護方式的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">治療效果和患者的生活質量</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">創傷知情照護</span><span class="tag">治療效果</span><span class="tag">患者照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42133389/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">⚖️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>創傷後壓力症候群（PTSD）症狀的預後與治療效果</h3>
+          <p class="journal-source">Journal of traumatic stress &middot; Predictors of Prognosis and Treatment Efficacy in Post-traumatic Stress Disorder (PTSD)</p>
+          <p>本研究探討了創傷後壓力症候群（PTSD）症狀的預後因素和治療效果。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">創傷後壓力症候群的受歷者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">治療方法，包括心理治療、藥物治療和其他相關介入措施</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同治療方法的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">治療效果和患者的生活質量</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">預後評估</span><span class="tag">治療效果</span><span class="tag">患者照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42132957/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🔍</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>童年創傷與憂鬱症：一個系統性評估</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Childhood Trauma and Depression: A Systematic Review</p>
+          <p>本研究進行了一個系統性評估，以了解童年創傷與憂鬱症之間的關係。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">童年創傷的受歷者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">沒有特別的介入措施，僅為評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">童年創傷與憂鬱症的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">憂鬱症的發生率、特點和影響</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">憂鬱症</span><span class="tag">ACEs</span><span class="tag">累積性創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134039/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌱</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>重傷與慢性壓力：表現型敏感性的種子與果實</h3>
+          <p class="journal-source">Genetica</p>
+          <p>本研究探討了重傷與慢性壓力如何影響表現型敏感性。</p>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">發展性創傷</span><span class="tag">表現型敏感性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135538/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔎</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>創傷性腦病徵症候群標準在識別慢性創傷性腦病徵患者中的表現</h3>
+          <p class="journal-source">Nature medicine</p>
+          <p>本研究評估了創傷性腦病徵症候群標準在識別慢性創傷性腦病徵患者中的表現。</p>
+          <div class="card-footer">
+            <span class="tag">慢性創傷性腦病徵</span><span class="tag">症候群標準</span><span class="tag">識別</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135530/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📚</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>創傷後壓力症候群</h3>
+          <p class="journal-source">Nature reviews. Disease primers</p>
+          <p>本評論提供了對創傷後壓力症候群（PTSD）的全面概述。</p>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">症候群</span><span class="tag">治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135343/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📚</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>創傷後壓力症候群</h3>
+          <p class="journal-source">Nature reviews. Disease primers</p>
+          <p>本評論提供了對創傷後壓力症候群（PTSD）的全面概述。</p>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">症候群</span><span class="tag">治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135308/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔬</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>TNF-α 缺陷降低副蟲樣神經元密度，損害穩態可塑性，干擾突触興奮-抑制平衡，並防止聽覺皮質的關鍵期閉合</h3>
+          <p class="journal-source">The Journal of neuroscience : the official journal of the Society for Neuroscience</p>
+          <p>本研究報告了 TNF-α 缺陷對成年聽覺皮質回路和功能的影响。</p>
+          <div class="card-footer">
+            <span class="tag">TNF-α</span><span class="tag">神經生物學</span><span class="tag">聽覺皮質</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135194/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📝</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>運動相關創傷與運動神經元疾病：一個範圍評估</h3>
+          <p class="journal-source">British journal of sports medicine</p>
+          <p>本研究進行了一個範圍評估，以了解運動相關創傷與運動神經元疾病之間的關係。</p>
+          <div class="card-footer">
+            <span class="tag">運動相關創傷</span><span class="tag">運動神經元疾病</span><span class="tag">範圍評估</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42135015/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👩‍⚕️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>女性的盆骨痛：對於主要護理中情感和診斷旅程的洞察</h3>
+          <p class="journal-source">The British journal of general practice : the journal of the Royal College of General Practitioners</p>
+          <p>本研究探討了女性盆骨痛患者對於主要護理中情感和診斷旅程的看法。</p>
+          <div class="card-footer">
+            <span class="tag">盆骨痛</span><span class="tag">情感和診斷旅程</span><span class="tag">女性</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134967/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🆕</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>預住院管理即將發生的氣管擠壓在作戰創傷中的管理：一個登記研究</h3>
+          <p class="journal-source">BMJ military health</p>
+          <p>本研究為即將發生的氣管擠壓在作戰創傷中的預住院管理提供了指導。</p>
+          <div class="card-footer">
+            <span class="tag">作戰創傷</span><span class="tag">氣管擠壓</span><span class="tag">預住院管理</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134904/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💉</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>移動式射频識別設備用於緊急醫療救援中血濃的批量識別和快速驗證</h3>
+          <p class="journal-source">Vox sanguinis</p>
+          <p>本研究報告了移動式射频識別設備在緊急醫療救援中血濃的批量識別和快速驗證的效率。</p>
+          <div class="card-footer">
+            <span class="tag">緊急醫療救援</span><span class="tag">血濃識別</span><span class="tag">移動式射频識別設備</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134848/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👁️‍🔍</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>眶周諾卡菌病在免疫正常患者中的病例系列和文獻综述</h3>
+          <p class="journal-source">Orbit (Amsterdam, Netherlands)</p>
+          <p>本研究描述了三個眶周諾卡菌病的病例，並對相關文獻進行了综述。</p>
+          <div class="card-footer">
+            <span class="tag">眶周諾卡菌病</span><span class="tag">病例系列</span><span class="tag">免疫正常</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134825/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Glymphatic系統：一個動態調節腦健康和治療目標的系統</h3>
+          <p class="journal-source">Experimental neurology</p>
+          <p>本研究對Glymphatic系統的作用和治療潛力進行了評估。</p>
+          <div class="card-footer">
+            <span class="tag">Glymphatic系統</span><span class="tag">腦健康</span><span class="tag">治療目標</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42134763/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">複雜性創傷/CPTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:66%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">童年創傷</span><span class="keyword">發展性創傷</span><span class="keyword">創傷治療</span><span class="keyword">PTSD</span><span class="keyword">解離</span><span class="keyword">患者照護</span><span class="keyword">治療效果</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5.1</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
