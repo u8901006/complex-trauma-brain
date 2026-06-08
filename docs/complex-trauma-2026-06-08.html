@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年6月8日</title>
+<meta name="description" content="2026年6月8日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年6月8日</span>
+        <span class="badge badge-count">📚 10 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻亮點集中在『解離性癲癇診斷工具優化』與『創傷性分娩的心理機制』，反映臨床對功能性神經症狀與周產期創傷的關注持續上升；同時，自傷行為與童年創傷、智力發展障礙的交織性也獲得新的實證支持。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>功能性/解離性癲癇篩檢量表日本版之重建與驗證</h3>
+          <p class="journal-source">Epilepsy & Behavior &middot; Reconstruction and validation of a short version of the scale for suspicion of psychogenic non-epileptic seizures in a Japanese cohort.</p>
+          <p>將15題的PNES篩檢量表精簡為6題兩因子（情緒壓力、精神特徵）版本，具高敏感度但特異度偏低，適合急診或初步篩檢快速識別功能性/解離性癲癇。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">接受癲癇全面評估的患者（含功能性/解離性癲癇與癲癇患者）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">簡化版SS-PNES量表（6題，情緒壓力與精神特徵兩因子）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">原版15題SS-PNES量表</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">功能性行解離性癲癇的診斷正確性（敏感度與特異度）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">解離</span><span class="tag">解離性疾患</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251834/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🤱</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>反芻思考在創傷性分娩知覺、生產滿意度與產後憂鬱間的中介角色</h3>
+          <p class="journal-source">Journal of Affective Disorders &middot; The mediating role of rumination in the relationship between traumatic childbirth perception, birth satisfaction, and postpartum depressive symptoms.</p>
+          <p>創傷性分娩知覺透過反芻思考完全中介影響產後憂鬱，而生產滿意度則透過反芻思考部分中介；臨床應將反芻思考納入產後創傷評估與介入核心。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">產後24-48小時內的婦女（n=309）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性中介分析）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">創傷性分娩知覺、生產滿意度與產後憂鬱症狀之間的中介路徑</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">人際創傷</span><span class="tag">情緒調節</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251901/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🔍</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>嚴重自傷住院患者的共病精神疾患：與智力發展障礙的關聯</h3>
+          <p class="journal-source">Nordic Journal of Psychiatry &middot; Comorbid mental disorders in extensively hospitalized patients due to severe self-harm: the association with intellectual developmental disorders.</p>
+          <p>在嚴重自傷住院患者中，疑似智力發展障礙（IDD）與更高的精神共病數量顯著相關，且此關聯獨立於BPD、物質使用障礙與童年創傷之外。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">因嚴重自傷長期住院的精神科成人患者（n=42）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">HASI篩檢智力發展障礙</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">疑似IDD與精神共病數量的關聯</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">自我組織紊亂</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251532/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🕸️</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>內化症狀網絡中的相對鄰近性分析</h3>
+          <p class="journal-source">Journal of Anxiety Disorders &middot; Mapping relative proximity within an internalizing symptoms network.</p>
+          <p>PTSD在症狀網絡中與憂鬱和廣泛性焦慮最為鄰近，支持「痛苦型內化向度」涵蓋PTSD的分類構想，而恐懼型向度的證據較弱。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">社區年輕成人樣本（n=2051，17-23歲）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（網絡分析）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">六種內化障礙症狀領域間的相對鄰近性</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251811/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🎖️</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>COVID-19疫情前後軍人與退伍軍人的健康與福祉：美國千禧世代世代研究發現</h3>
+          <p class="journal-source">Military Medicine &middot; The Health and Well-Being of Service Members and Veterans Before and During the COVID-19 Pandemic: Findings From the US Millennium Cohort Study.</p>
+          <p>疫情期間軍人與退伍軍人的PTSD、焦慮、憂鬱與問題性憤怒盛行率顯著高於疫情前，凸顯危機情境對創傷族群的加乘影響。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">美國軍人與退伍軍人（n=80,974）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（前後比較）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">疫情前回覆者（63%）vs疫情中回覆者（37%）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">PTSD、焦鬱、憤怒等心理健康指標的盛行率變化</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">創傷知情照護</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251696/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#6</span>
+            <span class="emoji-icon">✊</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>從生活經驗觀點批判性探索自傷：倖存者主導的參與式統合回顧</h3>
+          <p class="journal-source">Health Expectations &middot; Critically Exploring Self-Harm Through Lived Experience Perspectives: A Survivor-Controlled Integrative Review Employing Participatory Methodology.</p>
+          <p>自傷應理解為在社會處境中協商自我與經驗的情感實踐，而非僅是個人的情緒失調；臨床不應將其過度個人化與病理化。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">有自傷生活經驗者（質性研究統合）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（統合回顧）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">自傷的概念化理解與臨床意涵</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span><span class="tag">自我組織紊亂</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251529/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#7</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-low">低實用性</span>
+          </div>
+          <h3>DSP4誘發藍斑核功能障礙對睡眠的影響：系統性文獻回顧與方法學探討</h3>
+          <p class="journal-source">Neurobiology of Disease &middot; Impact of DSP4-induced locus coeruleus dysfunction on sleep: Systematic review and methodology.</p>
+          <p>系統性整理以DSP4損傷藍斑核模式探討睡眠結構變化的動物研究，並指出方法學變異來源，為PTSD相關睡眠障礙的神經機制研究奠基。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">接受DSP4處理的動物模型</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">DSP4選擇性損傷藍斑核</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未處理對照動物</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">睡眠結構（NREM/REM/清醒）的變化</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251969/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🕊️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>COVID-19疫情期間喪親家屬的憂鬱症狀與創傷後成長因子</h3>
+          <p class="journal-source">Kurume Medical Journal</p>
+          <p>疫情期間喪親者的憂鬱與感染焦慮、喪偶、與逝者互動不足相關；創傷後成長則與醫療專業人員支持及社會支持有關。</p>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42252184/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💊</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>伏隔核中型多棘神經元亞型在氯胺酮線索引發復發中的角色</h3>
+          <p class="journal-source">Neuropharmacology</p>
+          <p>D1R中型多棘神經元（非D2R）在氯胺酮線索引發的復發行為中扮演關鍵角色，對以氯胺酮治療PTSD的成癮風險評估具參考價值。</p>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42252079/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👶</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>精神科母嬰病房憂鬱症狀與育兒技能變化之評估</h3>
+          <p class="journal-source">Journal of Affective Disorders</p>
+          <p>母嬰同室住院治療顯著改善憂鬱症狀與育兒技能，但PTSD、人格障礙與焦慮診斷預示出院時較高的憂鬱分數。</p>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">創傷知情照護</span><span class="tag">依附創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42251902/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離/解離性疾患</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷知情照護</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">情緒調節</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經生物學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+              <span class="topic-count">0</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自我組織紊亂</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">依附創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:20%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">解離性癲癇</span><span class="keyword">創傷性分娩</span><span class="keyword">反芻思考</span><span class="keyword">產後憂鬱</span><span class="keyword">自傷</span><span class="keyword">智力發展障礙</span><span class="keyword">內化症狀網絡</span><span class="keyword">軍人創傷</span><span class="keyword">藍斑核</span><span class="keyword">創傷後成長</span><span class="keyword">創傷知情照護</span><span class="keyword">童年創傷</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5.1</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
