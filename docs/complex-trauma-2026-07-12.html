@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年7月12日</title>
+<meta name="description" content="2026年7月12日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年7月12日</span>
+        <span class="badge badge-count">📚 19 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻亮點集中在 CPTSD 在飲食疾患中的亞型分析、童年疏忽與虐待對情緒調節的差異性影響，以及 MDMA/氯胺酮輔助心理治療的表觀遺傳與臨床機制，顯示創傷領域正朝向精準化亞型分類與生物機制驗證邁進。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧩</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>飲食疾患患者的創傷亞型：潛在剖面分析</h3>
+          <p class="journal-source">Journal of eating disorders &middot; Trauma subgroups among individuals with eating disorders: a latent profile analysis.</p>
+          <p>研究以潛在剖面分析在飲食疾患族群中識別出四種創傷亞型，其中 CPTSD 亞型（同時具有高 PTSD 與 DSO 症狀及嚴重解離）的飲食疾患症狀最為嚴重，顯示 DSO 症狀是驅動飲食疾患嚴重度的核心因素，建議針對高 DSO 個案導入創傷聚焦治療。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">378 名接受住院、日間方案及門診飲食疾患服務的個案</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">以 ICD-11 PTSD/CPTSD 準則及解離症狀進行創傷亞型分類</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">四組創傷剖面（高 DSO、CPTSD、一般困擾、無/輕微創傷症狀）之間的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">飲食疾患嚴重度、憂鬱、焦慮及解離症狀的差異</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">複雜性創傷</span><span class="tag">CPTSD</span><span class="tag">解離</span><span class="tag">DSO</span><span class="tag">自我組織紊亂</span><span class="tag">創傷治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42432758/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🌱</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>童年疏忽、虐待及其組合與情緒調節及心理健康的差異關聯</h3>
+          <p class="journal-source">Communications psychology &middot; Childhood neglect, abuse, and their combination are differentially associated with specific emotion regulation and mental health issues.</p>
+          <p>採用精確配對方法發現，疏忽與情緒調節策略「使用減少」有關，虐待與「既有策略的破壞性應用」有關，而兩者合併暴露造成最廣泛的損害，支持以向度模型區分剝奪與威脅的不同發展影響。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">以基數與最佳配對法建構的大規模配對樣本</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（觀察性研究，比較疏忽、虐待及兩者合併）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">疏忽組 vs 虐待組 vs 疏忽+虐待組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">情緒調節困難、憂鬱、焦慮及自殺風險</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">疏忽</span><span class="tag">情緒調節</span><span class="tag">發展性創傷</span><span class="tag">累積性創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42432020/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>PTSD 大腦大尺度功能網路架構的時空特徵</h3>
+          <p class="journal-source">Translational psychiatry &middot; Characteristic spatiotemporal features of large-scale functional network architecture in posttraumatic stress disorder.</p>
+          <p>結合功能連結梯度映射與能量地景分析發現，PTSD 患者在視覺、警覺與預設模式網路出現廣泛空間位移，且呈現較少但更穩定的異常網路狀態，暗示從靈活適應轉向病理性固化的神經機制。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">創傷暴露控制組與 PTSD 患者群</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（功能性磁振造影觀察性研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">創傷暴露但無 PTSD 控制組 vs PTSD 患者</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">大尺度功能網路空間重組與動態協調特徵</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42431897/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>MDMA 輔助心理治療對歧視相關創傷症狀的改變</h3>
+          <p class="journal-source">Scientific reports &middot; Changes in trauma symptoms of discrimination after MDMA-assisted psychotherapy for posttraumatic stress disorder.</p>
+          <p>初步研究發現 MDMA 輔助心理治療後，五位經歷多重歧視的參與者其歧視相關創傷症狀顯著下降 38%，效果量極大（Cohen's d = 1.28），為邊緣群體的歧視創傷治療提供初步證據。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">5 位經歷多重歧視（性別、種族、社經、年齡、性取向）的 PTSD 參與者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">MDMA 輔助心理治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">治療前後自身對照</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">歧視創傷症狀量表（TSDS）分數變化</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">創傷治療</span><span class="tag">人際創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436172/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>氯胺酮與 MDMA 兩種新興心理塑性劑的腦靶向表觀遺傳效應</h3>
+          <p class="journal-source">Translational psychiatry &middot; Brain-targeted epigenetic effects of two emerging psychoplastogens: ketamine & MDMA.</p>
+          <p>腦表觀遺傳體關聯研究發現氯胺酮與 MDMA 治療後分別改變 405 和 346 個基因的 DNA 甲基化，兩者共同聚斂於神經可塑性與神經免疫調節路徑，為其治療創傷相關疾患的分子機制提供證據。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">氯胺酮臨床試驗參與者（N=20）與 MDMA 臨床試驗參與者（N=16）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">氯胺酮治療 / MDMA 輔助治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">治療前後周邊生物檢體（血液/唾液）DNA 甲基化變化</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">腦相關基因 DNA 甲基化變化與功能網路富集</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">創傷治療</span><span class="tag">神經生物學</span><span class="tag">PTSD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436129/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#6</span>
+            <span class="emoji-icon">🌙</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>童年創傷對經前症候群的影響：反芻思考的中介角色</h3>
+          <p class="journal-source">Scientific reports &middot; Structural equation modeling of the effect of childhood trauma on premenstrual syndrome: the mediating role of rumination in adolescent girls.</p>
+          <p>結構方程模型顯示童年創傷對青少年女性經前症候群有直接效應（β=0.52），且反芻思考顯著中介此關係（間接效應 β=0.20），提示早期偵測創傷與反芻介入可改善經前心理健康。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">384 名伊朗高中女學生</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷式觀察研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">不同童年創傷程度與反芻思考程度的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">經前症候群嚴重度</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">情緒調節</span><span class="tag">ACEs</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436190/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#7</span>
+            <span class="emoji-icon">💭</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>恐怖攻擊生還者的反事實思考：「我本可以殺了他」</h3>
+          <p class="journal-source">Scandinavian journal of psychology &middot; "I Could Have Killed Him" Survivors' Descriptions of Their Counterfactual Thoughts After a Terrorist Attack.</p>
+          <p>挪威 Utøya 島恐怖攻擊生還者在事件後 8.5 年仍報告豐富的反事實思考，多數涉及自責與「如果當時採取不同行動」的替代情境，臨床工作者需辨識此現象以協助個案處理創傷相關痛苦。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">220 名 Utøya 恐怖攻擊生還者（平均年齡 27.5 歲）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（質性主題分析）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">反事實思考的特徵（方向、結構、社會焦點、時間點）與內容</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">人際創傷</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42435482/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#8</span>
+            <span class="emoji-icon">🔍</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>尋求注意力不足過動症神經心理學評估者的童年不良經驗與社會決定因素表型</h3>
+          <p class="journal-source">Developmental neuropsychology &middot; Adverse Childhood Experiences and Social Determinants of Health Phenotypes Among Individuals Seeking Neuropsychological Evaluation for Attention-Deficit/Hyperactivity Disorder: A Latent Profile Analysis.</p>
+          <p>潛在剖面分析在 273 名尋求 ADHD 評估的成人中識別出五種 ACE/SDOH 表型，包括「性虐待」、「高虐待/疏忽/ACEs」等群組，強調在神經心理學評估中脈絡化理解童年創傷的重要性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">273 名因疑似 ADHD 轉介神經心理學評估的成人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（探討性觀察研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">五種 ACE/SDOH 潛在剖面之間的比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">ACE 與社會決定因素表型的分類與特徵</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">ACEs</span><span class="tag">疏忽</span><span class="tag">性虐待</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42433086/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔇</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>非接觸性暴力與伊朗女性性與心理社會健康的關聯：全國橫斷研究</h3>
+          <p class="journal-source">BMC women's health</p>
+          <p>16.9% 的伊朗女性曾經歷非接觸性暴力（以暴露狂為主），平均受害年齡 12.3 歲，74% 從未告知他人，且與憂鬱、性功能障礙及性迴避顯著相關。</p>
+          <div class="card-footer">
+            <span class="tag">性虐待</span><span class="tag">人際創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436470/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧘</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>整合性治療瑜伽對物質使用疾患及共病症狀的效果</h3>
+          <p class="journal-source">International journal of yoga therapy</p>
+          <p>在 117 名住院物質使用疾患患者中，整合治療瑜伽顯著降低憂鬱、焦慮及 PTSD 症狀，並提升心理彈性與自我慈悲。</p>
+          <div class="card-footer">
+            <span class="tag">創傷治療</span><span class="tag">PTSD</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42436020/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>新生兒加護病房提供者的創傷知情照護教育：發展、實施與成效</h3>
+          <p class="journal-source">Academic pediatrics</p>
+          <p>針對 121 名 NICU 提供者的創傷知情照護線上模組顯著提升知識、態度與實務，知識與實務改善在 30 天後仍持續，但對倦怠無顯著影響。</p>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42435802/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚽</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>經歷人際暴力的年輕運動員較缺乏心理安全感且較不願通報</h3>
+          <p class="journal-source">Psychology of sport and exercise</p>
+          <p>476 名競技運動員研究顯示，人際暴力經驗透過心理安全感負向預測通報意願，且年齡越小此效應越強，凸顯營造心理安全環境的重要性。</p>
+          <div class="card-footer">
+            <span class="tag">人際創傷</span><span class="tag">兒童虐待</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42435787/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌈</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>LGBTQIA+ 個體的疼痛韌性建構</h3>
+          <p class="journal-source">Physical therapy</p>
+          <p>提出以肯定性、韌性為導向的慢性疼痛管理框架，整合創傷知情實務與社會結構不平等的辨識，超越傳統缺陷導向模式。</p>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42434907/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🚑</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>災難工作人員的風險管理：心理韌性、壓力因應與人格的評估</h3>
+          <p class="journal-source">Work (Reading, Mass.)</p>
+          <p>295 名災難應變人員研究發現，心理韌性、主動因應策略與外向性正向預測心理社會風險管理效能，建議將韌性培訓納入災難準備方案。</p>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42434891/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🛡️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>日本照護者急診就醫後通報疑似兒童不當對待的臨床與流行病學特徵</h3>
+          <p class="journal-source">Acute medicine & surgery</p>
+          <p>79 名照護者急診就醫中，53% 有心理健康史，常見診斷包括解離相關診斷、家庭暴力傷害及自傷，疏忽為最常見通報原因。</p>
+          <div class="card-footer">
+            <span class="tag">兒童虐待</span><span class="tag">疏忽</span><span class="tag">家庭暴力</span><span class="tag">解離</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42434793/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🕊️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>悲傷的權利：挪威女性第二孕期終止妊娠的照護經驗</h3>
+          <p class="journal-source">Omega</p>
+          <p>質性研究發現晚期終止妊娠女性的照護經驗碎片化，臨床與情緒語言的切換造成認知失調，凸顯整合創傷知情照護的必要性。</p>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42435214/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📋</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>智能障礙女性子宮頸癌篩檢障礙與 HP V 自我採檢接受度</h3>
+          <p class="journal-source">British journal of health psychology</p>
+          <p>過去創傷經驗塑造智能障礙女性對醫療檢查的迴避行為，研究強調需以創傷知情照護方式提供篩檢服務。</p>
+          <div class="card-footer">
+            <span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42433007/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">✍️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>表達性書寫介入對生殖創傷患者焦慮、憂鬱與壓力的效果：隨機對照試驗統合分析</h3>
+          <p class="journal-source">BMC pregnancy and childbirth</p>
+          <p>統合分析 10 項 RCT（838 名參與者）顯示表達性書寫介入對生殖創傷後憂鬱有部分效果，但對焦慮與壓力未達顯著療效。</p>
+          <div class="card-footer">
+            <span class="tag">創傷治療</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42432549/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🦷</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>童年不良與正向經驗與成年牙痛的關聯</h3>
+          <p class="journal-source">Scientific reports</p>
+          <p>28,413 名成人調查顯示 ACEs 與成年牙痛顯著正相關（PR=1.30），而正向童年經驗可削弱此關聯，支持生命歷程視角。</p>
+          <div class="card-footer">
+            <span class="tag">ACEs</span><span class="tag">童年創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42432131/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">複雜性創傷/CPTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷知情照護</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">5</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經生物學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">ACEs</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:60%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">情緒調節</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:80%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">性虐待</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒童虐待</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">疏忽</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:40%"></div></div>
+              <span class="topic-count">2</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">CPTSD</span><span class="keyword">DSO</span><span class="keyword">童年創傷</span><span class="keyword">情緒調節</span><span class="keyword">解離</span><span class="keyword">MDMA輔助治療</span><span class="keyword">表觀遺傳</span><span class="keyword">創傷知情照護</span><span class="keyword">ACEs</span><span class="keyword">反事實思考</span><span class="keyword">神經可塑性</span><span class="keyword">潛在剖面分析</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5.1</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
