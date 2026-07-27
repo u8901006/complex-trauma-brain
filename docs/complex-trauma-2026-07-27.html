@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年7月27日</title>
+<meta name="description" content="2026年7月27日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年7月27日</span>
+        <span class="badge badge-count">📚 15 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻以PTSD神經生物學機制為主軸，動物模型研究揭示早期GABA能與血清素能系統的顯著下調以及miR-124對海馬神經保護的潛力；另有重要臨床研究指出非自殺性自傷（NSSI）是區辨青少年自殺企圖的最強獨立因子，凸顯自傷行為處理在臨床自殺防治中的核心地位。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>青少年自殺風險因子不盡相同：人格功能運作與自傷行為的區辨角色</h3>
+          <p class="journal-source">Journal of Affective Disorders &middot; Not all risk factors are equal: Personality functioning and self-injury in adolescent suicidality.</p>
+          <p>在570名青少年精神科住院樣本中，人格功能受損與童年創傷為自殺的一般脆弱因子，而非自殺性自傷（NSSI）是區辨自殺企圖與僅有自殺意念的最強獨立因子（OR=2.84），臨床上應優先評估與處理自傷行為以預防自殺行動。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">570名青少年精神科住院患者（平均15.2歲，78%女性），分為自殺企圖組、僅有自殺意念組、無自殺症狀組</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無介入（橫斷面觀察性研究），以結構化訪談與量表評估人格功能（ICD-11）、認同感擴散、童年創傷、NSSI及人格疾患（ICD-10）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">三組比較：自殺企圖 vs. 僅自殺意念 vs. 無自殺症狀</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">人格功能受損與童年創傷在三組間呈現梯度差異但無法區分企圖與意念組；NSSI在自殺企圖組盛行率最高，為最強獨立預測因子（OR=2.84, 95% CI [1.74, 4.61]）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">自我組織紊亂</span><span class="tag">人際創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503316/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>PTSD早期階段誘發GABA能-血清素能系統下調：PTSD動物模型之多重PET影像研究</h3>
+          <p class="journal-source">Nuclear Medicine and Molecular Imaging &middot; The Early Stage of Post-Traumatic Stress Disorder (PTSD) Event Induces Down-Regulation of the Gamma-Aminobutyric Acidergic-Serotonergic System: Multiple PET Imaging in a PTSD Animal Model.</p>
+          <p>在SPS誘導的PTSD大鼠模型中，以多重PET影像首次證實PTSD早期階段大腦GABA與血清素系統顯著下降（尤其是前額葉皮質與杏仁核），而麩胺酸系統無顯著變化，海馬CA2區出現選擇性神經元流失，為PTSD早期神經化學病理提供客觀影像生物標記。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">雌性Sprague-Dawley大鼠，對照組與SPS誘導PTSD組各6隻</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單次延長壓力（SPS）協議誘導PTSD（束縛＋強迫游泳＋麻醉），靜息7天後執行多重PET掃描</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未接受SPS之正常對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">GABA PET在扣帶回、額葉聯合區、內側前額葉及眶額葉皮質顯著降低（p<0.01）；血清素PET在杏仁核、皮質及海馬下降；麩胺酸PET無差異；組織學顯示海馬CA2區神經元密度顯著減少（p<0.01）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502659/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🧬</span>
+            <span class="utility-low">低實用性</span>
+          </div>
+          <h3>miR-124透過下調IQGAP1調節肌動蛋白結合蛋白與海馬神經元凋亡，改善PTSD大鼠空間記憶缺陷</h3>
+          <p class="journal-source">Molecular Neurobiology &middot; miR-124 Ameliorates Spatial Memory Deficits in Rats Exposed to Single-Prolonged Stress by Downregulating IQGAP1 to Regulate Actin-Binding Proteins and Apoptosis in Hippocampal Neurons.</p>
+          <p>在SPS大鼠模型中發現miR-124透過抑制IQGAP1、上調肌動蛋白結合蛋白（drebrin1與p-cofilin）並減少海馬神經元凋亡，顯著改善PTSD相關的空間記憶缺陷，為PTSD認知症狀的分子機制與潛在治療標靶提供新方向。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">暴露於單次延長壓力（SPS）的大鼠（PTSD動物模型）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">miR-124調控及IQGAP1抑制</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">未暴露於SPS的正常對照大鼠</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">miR-124表現恢復改善了空間記憶；IQGAP1被鑑定為下游靶標；drebrin1與p-cofilin表現上升；海馬神經元凋亡顯著減少</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503546/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📋</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>更正：CT定義之眼眶壁負荷與急性眼眶創傷早期視覺功能障礙</h3>
+          <p class="journal-source">Emergency Radiology</p>
+          <p>眼眶創傷影像學更正啟事，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503560/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🏥</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>胸腔脾組織植入：以功能性影像確診的優秀擬似病灶</h3>
+          <p class="journal-source">EJNMMI Reports</p>
+          <p>以核醫影像技術診斷胸腔脾組織植入的案例報告，屬外傷後身體組織異位，非心理創傷範疇。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503548/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧫</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>從病患到腫瘤類器官：培養協議選擇控制膠質母細胞瘤的腫瘤結構與身分</h3>
+          <p class="journal-source">Brain Pathology</p>
+          <p>比較不同膠質母細胞瘤類器官培養方法對腫瘤特性的影響，與心理創傷無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503464/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🩻</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>光子計數CT技術在肺部疾病偵測中的角色</h3>
+          <p class="journal-source">Orvosi Hetilap</p>
+          <p>光子計數CT在肺部疾病診斷中的文獻回顧，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503163/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚛️</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>氫同位素在不同成分Fe-Cr合金中的吸附、滲透與脫附之密度泛函理論研究</h3>
+          <p class="journal-source">ChemPhysChem</p>
+          <p>材料科學基礎研究，與心理創傷完全無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42503041/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌱</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>1-羥基吩嗪透過標靶PLP依賴性轉移酶控制 Corynespora 靶斑病</h3>
+          <p class="journal-source">Phytopathology</p>
+          <p>農業殺菌劑開發研究，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502973/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👶</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>兒科患者唾液採樣診斷能力評估：隨機化個體內研究計畫</h3>
+          <p class="journal-source">MethodsX</p>
+          <p>比較唾液採樣與鼻咽抽吸在嬰幼兒呼吸道感染診斷中的一致性與耐受性，雖提及程序性創傷但非心理創傷研究。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502776/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🦠</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>靶向惡性瘧原蟲HSP70與LDH之噬菌體展示scFv抗體的分離與特性分析</h3>
+          <p class="journal-source">Biochemistry Research International</p>
+          <p>瘧疾診斷抗體開發研究，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502673/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚾</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>尺側副韌帶混合重建合併掌長肌自體移植、縫線支架增強與尺神經轉位</h3>
+          <p class="journal-source">Video Journal of Sports Medicine</p>
+          <p>運動醫學手術技術影片，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502619/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🦶</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>長期糖尿病中的無症狀Charcot足</h3>
+          <p class="journal-source">Surgery in Practice and Science</p>
+          <p>長期糖尿病患者Charcot足的X光篩檢研究，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502610/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💊</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>以妊娠早期為初始表現的復發性壞疽性膿皮症：烏干達資源有限地區PARACELSUS支持的臨床診斷</h3>
+          <p class="journal-source">International Medical Case Reports Journal</p>
+          <p>皮膚疾病案例報告，與心理創傷領域無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502448/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔗</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>sp2 C=C連接共價有機框架中的受體調節激子動力學</h3>
+          <p class="journal-source">Small</p>
+          <p>材料化學研究，與心理創傷領域完全無關。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42502196/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經生物學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自我組織紊亂</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">PTSD</span><span class="keyword">神經生物學</span><span class="keyword">青少年自殺</span><span class="keyword">非自殺性自傷</span><span class="keyword">NSSI</span><span class="keyword">人格功能</span><span class="keyword">童年創傷</span><span class="keyword">GABA</span><span class="keyword">血清素</span><span class="keyword">海馬</span><span class="keyword">miR-124</span><span class="keyword">IQGAP1</span><span class="keyword">PET影像</span><span class="keyword">自我組織紊亂</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：glm-5.1</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
