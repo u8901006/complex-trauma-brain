@@ -83,7 +83,7 @@ index = f"""<!DOCTYPE html>
     </a>
   </div>
   <footer>
-    <p>Powered by PubMed + Zhipu AI \u00b7 <a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></p>
+    <p>Powered by PubMed + NVIDIA Nemotron \u00b7 <a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></p>
   </footer>
 </div>
 </body>

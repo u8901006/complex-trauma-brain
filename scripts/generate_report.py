@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate complex trauma & dissociation daily report HTML using Zhipu GLM-5.1.
+Generate complex trauma & dissociation daily report HTML using NVIDIA Nemotron.
 Reads papers JSON, analyzes with AI, generates styled HTML.
 """
 
@@ -13,10 +13,9 @@ from datetime import datetime, timezone, timedelta
 
 import httpx
 
-API_BASE = os.environ.get(
-    "ZHIPU_API_BASE", "https://open.bigmodel.cn/api/coding/paas/v4"
-)
-MODEL_NAME = os.environ.get("ZHIPU_MODEL", "glm-5.1")
+API_BASE = "https://integrate.api.nvidia.com/v1"
+MODEL_NAME = "nvidia/nemotron-3-super-120b-a12b"
+FALLBACK_MODEL = "nvidia/nemotron-3-nano-30b-a3b"
 
 SYSTEM_PROMPT = (
     "你是心理創傷、複雜性創傷（Complex PTSD）與解離領域的資深研究評論分析師。你的任務是：\n"
@@ -118,12 +117,14 @@ def analyze_papers(api_key: str, papers_data: dict) -> dict:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
         ],
-        "temperature": 0.3,
-        "top_p": 0.9,
+        "temperature": 1.0,
+        "top_p": 0.95,
         "max_tokens": 8192,
+        "stream": False,
+        "chat_template_kwargs": {"enable_thinking": False},
     }
 
-    models_to_try = [MODEL_NAME, "glm-4-flash", "glm-4-plus", "glm-4"]
+    models_to_try = [MODEL_NAME, FALLBACK_MODEL]
 
     for model in models_to_try:
         payload["model"] = model
@@ -365,7 +366,7 @@ def generate_html(analysis: dict) -> str:
       <div class="header-meta">
         <span class="badge badge-date">\U0001f4c5 {date_display}</span>
         <span class="badge badge-count">\U0001f4da {total_count} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
       </div>
     </div>
   </header>
@@ -422,13 +423,13 @@ def main():
     parser.add_argument("--input", required=True, help="Input papers JSON file")
     parser.add_argument("--output", required=True, help="Output HTML file")
     parser.add_argument(
-        "--api-key", default=os.environ.get("ZHIPU_API_KEY", ""), help="Zhipu API key"
+        "--api-key", default=os.environ.get("NVIDIA_API_KEY", ""), help="NVIDIA API key"
     )
     args = parser.parse_args()
 
     if not args.api_key:
         print(
-            "[ERROR] No API key provided. Set ZHIPU_API_KEY env var or use --api-key",
+            "[ERROR] No API key provided. Set NVIDIA_API_KEY env var or use --api-key",
             file=sys.stderr,
         )
         sys.exit(1)
