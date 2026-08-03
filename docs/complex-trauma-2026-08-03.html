@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年8月3日</title>
+<meta name="description" content="2026年8月3日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月3日</span>
+        <span class="badge badge-count">📚 8 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於社會結構性創傷與個人心理健康的交叉影響，尤其突顯社區暴力（如槍擊）、種族與性別交叉歧視、以及無家可歸者的藥物使用經驗如何塑造創傷軌跡與治療障礙。雖無直接論述解離或CPTSD，但多篇研究間接揭示創傷的社會決定因素與心理後續影響，具有重要臨床與政策啟示。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🔫</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>社區槍擊暴力如何調節青少年在疫情後自殺風險的軌跡：費城2017-2024年研究</h3>
+          <p class="journal-source">Pediatrics &middot; Community Firearm Violence, Youth Depression, and Suicide Risk in Philadelphia: 2017-2024.</p>
+          <p>研究發現社區槍擊暴力是青少年疫情後自殺風險持續升高的關鍵調節因素：在暴力熱區，自殺風險反而上升，顯示創傷性環境可削弱疫情結束後的復原力。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">費城12-18歲青少年（n=35,137，50%女性，67%非西班牙裔黑人）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷式觀察研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">按社區槍擊暴力程度分為熱點、中性點、冷點 neighbourhoods</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">在冷點地區自殺風險下降(-2.2 pp)，但在熱點(+2.0 pp)和中性點(+0.9 pp)上升；總體自殺風險疫後仍升高至10.8%（vs 9.6%疫前），特別在非西班牙裔黑人與Medicaid青少年中顯著。</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">人際創傷</span><span class="tag">創傷治療</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42543172/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">⚖️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>黑人跨性別女性遭遇交叉歧視與健康自我效能對心理健康（含PTSD）的影響</h3>
+          <p class="journal-source">Nursing outlook &middot; Associations between intersectional discrimination, self-efficacy to manage one's health, and health outcomes among Black transgender women.</p>
+          <p>雖健康自我效能與較佳心理健康相關，但未能完全緩解交叉歧視對PTSD、憂鬱和不健康天數的負面影響，提示系統性壓力的深層侵蝕。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">美國社區樣本中的154名黑人跨性別女性</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷式問卷調查）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">較高 vs 較低交叉歧視暴露；較高 vs 較低健康自我效能</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">較高健康自我效能與較好整體心理健康相關（r > 0），但未顯著緩和（非調節）交叉歧視對PTSD症狀、憂鬱和不健康天數的影響，提示部分中介而非完全緩衝。</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">PTSD</span><span class="tag">情緒調節</span><span class="tag">身體化解離</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42543054/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🏚️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>無家可歸者酒精治療經驗：創傷為核心驅動因素與系統性障礙</h3>
+          <p class="journal-source">Addiction (Abingdon, England) &middot; People experiencing homelessness and their experiences with substance use services for alcohol treatment in England: Journey mapping based on semi-structured interviews.</p>
+          <p>參與者普遍將重度飲酒 onset 追溯至童年創傷與不利家庭環境，酒精被描述為對情緒痛苦的應對機制，而無家可歸既是原因也是結果，形成惡性循環。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">英國伦敦无家可归者，目前或过去有害使用酒精（n=32）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">質性旅程圖訪談（semi-structured journey-mapping interviews）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無（敘事探索）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">六個核心主題：童年創傷早期接觸酒精；情緒痛苦的應對機制；無家可歸與飲酒的互相強化；系統性與人際障礙（等待時間長、行政複雜、負面服務經驗）；內在復原動機；外部支持系統的關鍵作用。</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年創傷</span><span class="tag">情緒虐待</span><span class="tag">創傷治療</span><span class="tag">依附創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42543156/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🏗️</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>後災難復原中的社會參與與權力關係：反壓迫社會工作視角（土耳其地震）</h3>
+          <p class="journal-source">Journal of evidence-based social work (2019) &middot; Community Participation and Power Relations in Post-Disaster Recovery: A Qualitative Study from an Anti-Oppressive Social Work Perspective.</p>
+          <p>社會參與在災後復原中並非自發良性，而是被制度不信任、援助不平等、污名化與不可持續的團結實践所塑造，權力動態決定誰能真正獲得發聲與代理權。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">經歷2023年2月6日土耳其卡赫曼馬拉什地震的20位倖存者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（現象學質性訪談）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無（主題探索）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">四個主要主題：制度信任 erosions；非正式團結的雙刃劑（既恢復亦限制）；污名與服務存取不平等；透過社會參與重建 belonging 與 agency。</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">人際創傷</span><span class="tag">創傷治療</span><span class="tag">創傷知情照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542559/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🌀</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>雙側前庭機能失調中臨床功能性解離：暈眩與跌倒的不同決策因素</h3>
+          <p class="journal-source">Journal of neurology &middot; Clinical-functional dissociation in bilateral vestibulopathy: determinants of disability beyond peripheral vestibular loss.</p>
+          <p>在雙側前庭機能衰竭(BVP)患者中，暈眩(oscillopsia)主要與半規管功能相關，而跌倒則由姿勢控制與多感官整合能力預測，凸顯身體感官整合失調與功能性殘障之間的解離。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">確診雙側前庭機能衰竭患者（n=126）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（回顧性多分中心研究）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">按暈眩與跌倒嚴重程度分為輕度、中度、重度功能表型</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">暈眩與半規管功能（特別是水平運河增益）相關（LSC AUC=0.637），而跌倒與姿勢控制測試（SOT AUC=0.676，LOS AUC=0.699）相關，前庭末梢功能測試無法完整解釋臨床嚴重程度。</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">解離</span><span class="tag">身體化解離</span><span class="tag">神經生物學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42543441/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔬</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>骨組織工程新生物材料：BLGFs/ODEX膠水與魚皮膠原複合物促進骨再生</h3>
+          <p class="journal-source">International journal of biomaterials</p>
+          <p>開發出具優異孔隙度、生物相容性與機械穩定性的混合水凝膠（BLGFs/ODEX/COL），經由Alizarin Red染色證明其誘導骨髓間葉幹細胞鈣化沉積，具有骨組織再生潛力。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542837/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🩹</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>兒童骨髓增生異常綜合症併發膿性陰性壞疽：一個病例報告</h3>
+          <p class="journal-source">SAGE open medical case reports</p>
+          <p>報告一例3歲男童，因 myelodysplastic syndrome 併發 pyoderma gangrenosum，初期被誤診為感染導致長期抗生素使用，後經組織病理確認並對類固醇療法有良好反應。</p>
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542782/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🚑</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>南非主要創傷中心急診床位擠塞現象的量化分析：門診住院通道阻塞（access block）</h3>
+          <p class="journal-source">African journal of emergency medicine : Revue africaine de la medecine d'urgence</p>
+          <p>在南非最大級創傷中心，61.3% 的創傷患者經歷超過8小時的急診待床，CT檢查、ICU收治、機械通氣是主要風險因子，提示資源分配與流程瓶頸是患者延遲治療的關鍵。</p>
+          <div class="card-footer">
+            <span class="tag">人際創傷</span><span class="tag">創傷治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42542626/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">複雜性創傷/CPTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+              <span class="topic-count">0</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:25%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">創傷的社會決定因素</span><span class="keyword">交叉歧視</span><span class="keyword">創傷知情照護</span><span class="keyword">酒精使用障礙</span><span class="keyword">災後復原</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
