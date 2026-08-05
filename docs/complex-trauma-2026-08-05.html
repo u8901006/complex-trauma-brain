@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complex Trauma Brain &middot; 心理創傷文獻日報 &middot; 2026年8月5日</title>
+<meta name="description" content="2026年8月5日 心理創傷、複雜性創傷與解離領域文獻日報，由 AI 自動彙整 PubMed 最新論文"/>
+<style>
+  :root { --bg: #f0f4f3; --surface: #f8faf9; --line: #c8d5d0; --text: #1a2e28; --muted: #5a7568; --accent: #2d6a4f; --accent-soft: #d8ede3; --accent-dark: #1b4332; --card-bg: color-mix(in srgb, var(--surface) 92%, white); }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(ellipse at top left, #e8f0ec 0, var(--bg) 40%, #dce5e0 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(45,106,79,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(45,106,79,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(26,46,40,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(26,46,40,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #f0fff6; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #2d6a4f; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(45,106,79,0.12); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,117,104,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(248,250,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #f0fff6; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(45,106,79,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #52b788); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .clinic-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.4s both; }
+  .clinic-links { display: flex; flex-direction: column; gap: 10px; }
+  .clinic-link { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--card-bg); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(26,46,40,0.04); }
+  .clinic-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(26,46,40,0.08); }
+  .clinic-icon { font-size: 28px; flex-shrink: 0; }
+  .clinic-name { font-size: 15px; font-weight: 700; color: var(--text); flex: 1; }
+  .clinic-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .clinic-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>Complex Trauma Brain &middot; 心理創傷文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年8月5日</span>
+        <span class="badge badge-count">📚 11 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA Nemotron</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📊 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於兒童虐待與解離的神經機制、童年創傷對心理康復的負面影響，以及醫護人員在長期危機中面對的創傷暴露與職業倦怠，顯示創傷研究從個體症狀延伸至系統性與神經生物學層面的深度探索。</p>
+  </div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>童年虐待如何影響同理心網路但不影響心智理論網路：來自橫斷診斷樣本的fMRI證據</h3>
+          <p class="journal-source">European archives of psychiatry and clinical neuroscience &middot; Childhood maltreatment impacts the activity of the neural empathy but not theory of mind network: findings from a transdiagnostic sample.</p>
+          <p>研究發現童年虐待與同理心相關的 dorsomedial 前葉皮質活動呈負相關，但與心智理論網路無關，支持同理心受損為童年創傷導致精神病理的跨診斷機制。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">101名患有PTSD、MDD、SSD或為健康志願者的成年人，具不同程度童年虐待經驗</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">使用EmpaToM任務評估社會認知及其神經相關，並以訪談評估童年虐待嚴重度</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">高童年虐待組 vs 低/無童年虐待組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">童年虐待嚴重度與 dorsomedial 前葉皮質（同理心網路）活動負相關（β = -0.32，p < 0.01），但與心智理論網路無關聯</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">童年虐待</span><span class="tag">同理心</span><span class="tag">解離</span><span class="tag">創傷知情照護</span><span class="tag">橫斷診斷</span><span class="tag">fMRI</span><span class="tag">PTSD</span><span class="tag">MDD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42550193/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🏥</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>長期暴露於醫療攻擊對剛果東部醫護人員心理健康與留職意願的影響：混合方法研究</h3>
+          <p class="journal-source">Comprehensive psychiatry &middot; Long-term impact of attacks on health care on mental health and workforce retention among healthcare workers in protracted emergency settings: East of the Democratic Republic of Congo.</p>
+          <p>超過半數暴露於醫療攻擊超過2.5年醫護人員出現嚴重心理健康風險，創傷暴露顯著增加PTSD症狀與離職意圖，凸顯長期危機中醫護人員的雙重創傷負擔。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">407名剛果東部醫療工作者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">評估其對醫療攻擊（AHC）的暴露歷史與時長</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">暴露 >2.5年 vs ≤2.5年 vs 未暴露組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">暴露 >2.5年者一般心理健康風險達71%（aPR 1.89），PTSD症狀增加12%（aPR 1.12），離職意圖增加75%（aPR 1.75）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">人道主義危機</span><span class="tag">醫療工作者創傷</span><span class="tag">PTSD</span><span class="tag">職業倦怠</span><span class="tag">創傷暴露</span><span class="tag">剛果</span><span class="tag">職場創傷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551045/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">⛓️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>美國代表性囚犯樣本中累積終身創傷暴露的流行病學：囚犯創傷暴露率是社區的三倍</h3>
+          <p class="journal-source">Social psychiatry and psychiatric epidemiology &middot; Cumulative lifetime trauma exposures in a nationally representative prison sample: findings from the mental health and substance use disorders prevalence survey.</p>
+          <p>美國國家代表性囚犯樣本中，經歷任一類創傷的可能性是社區的三倍，多重創傷暴露為兩倍，揭示矯正系統中創傷的流行病學特徵與系統性需求。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">全國代表性美國囚犯樣本（93%男性，60%為有色人種）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">透過MDPS調查計算六類創傷終身患病率及累積暴露風險</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">囚犯群 vs 社區對照群（控制社會人口學變項）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">囚犯經歷任一類創傷的OR = 3.0；多重創傷OR = 2.0；近半數（49.8%）報告經歷不良產周事件</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">累積性創傷</span><span class="tag">囚犯</span><span class="tag">創傷流行病學</span><span class="tag">ACE</span><span class="tag">矯正心理健康</span><span class="tag">創傷知照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42550217/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">💇</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>髮絲內神經內分泌與 endocannabinoid 标志物在急性應激反應中的橫跨國家驗證：解離為核心症狀網絡樞紐</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Hair neuroendocrine signatures of acute stress reaction symptoms: Cross-national validation and latent profile heterogeneity.</p>
+          <p>在法國、中國、德國的688名參與者中，毛髮endocannabinoid（AEA）與社交功能受損及迴避行為強烈相連，且解離在ASR症狀網絡中具有最高中心性，提示其為壓力反應的核心維度。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">來自法國、中國、德國的688名成年人（COVID-19期間）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">測量毛髮類固醇、endocannabinoid濃度及ASR症狀（情感、 somatic、認知、行為）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低反應 vs 高反應ASR亞群（經LPA識別）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">解離在ASR症狀網絡中中心性最高；AEA-避退行為特徵性地僅連結至低反應亞群；跨國網絡結構存在顯著差異</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">急性應激反應</span><span class="tag">解離</span><span class="tag">endocannabinoid</span><span class="tag">毛髮生物標誌</span><span class="tag">跨國研究</span><span class="tag">壓力生物學</span><span class="tag">潛類別分析</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551562/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📉</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>終身創傷與不健康生活樣式對亞臨床憂鬱症狀轉變的影響：馬爾可夫多態模型顯示創傷降低康復機會</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Transitions in depressive symptom states among adults with subthreshold depression: Associations with lifetime trauma exposure and combined lifestyle in a multistate Markov study.</p>
+          <p>終身創傷暴顯著降低輕度憂鬱恢復為正常的機率（HR=0.54），並減緩中度/重度轉為輕度的復原率（HR=0.52）；不健康生活樣式則同時降低康復與增加惡化風險。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">2361名中國成年人（PHQ-9≥5，無憂鬱症診斷），平均年齡37.3歲</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">終身創傷暴露史與五項健康生活樣式複合評分</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">高創傷/不健康生活樣式 vs 低風險組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">終身創傷與輕度→正常復原率下降相關（HR=0.54）；中度/重度→輕度復原率下降（HR=0.52）；不健康生活樣式與輕度→中度/重度惡化率增加相關（HR=1.60）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">亞臨床憂鬱</span><span class="tag">終身創傷</span><span class="tag">生活樣式</span><span class="tag">馬爾可夫模型</span><span class="tag">復原率</span><span class="tag">創傷知照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551565/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#6</span>
+            <span class="emoji-icon">💻</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>戰地兒童精神健康網路透過線上研討會：烏克蘭戰爭背景下的ESCAP國際模式如何建置本土化能力</h3>
+          <p class="journal-source">European child & adolescent psychiatry &middot; Webinars about child and adolescent psychiatry can support professionals in war-affected regions: lessons from the ESCAP-Ukraine webinar initiative.</p>
+          <p>透過雙語、互動式網路研討會，超過萬名烏克蘭前線專業人士獲得兒童創傷與精神健康培訓，證明數位平台可在戰爭中擴大創傷知照護服務的可及性。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">烏克蘭全國醫療、教育、社會服務專業人士（10,489名獨特參與者）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">ESCAP-Ukraine網路研討會系列（2024-2026），含同步翻譯與互動討論</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">戰前 vs 戰中專業培訓可及性</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">前線地區參與率顯著；醫療（48.5%）與教育（27.6%）為最大參與領域；支持系統性改革與社區心理健康服務發展</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">戰爭創傷</span><span class="tag">兒童精神健康</span><span class="tag">線上培訓</span><span class="tag">國際合作</span><span class="tag">烏克蘭</span><span class="tag">創傷知照護</span><span class="tag">人道主義援助</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42550243/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#7</span>
+            <span class="emoji-icon">🔔</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>ICU護士在警報監控生態中經歷的數位凝視與間接創傷：質性訪談研究</h3>
+          <p class="journal-source">Journal of medical Internet research &middot; Digital Gaze and Vicarious Trauma Among Intensive Care Unit Nurses in Alarm-Monitoring Ecologies: Qualitative Interview Study.</p>
+          <p>ICU護士因持續生理監控與警報產生「數位凝視」，導致情緒耗竭、責任過重及創傷後遺症樣徵狀，顯示監控系統設計亟需納入人因與復原支援。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">15名來自杭州三級醫院的ICU護士</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">半結構式訪談探討監控 routines、警報反應、後_shift 恢復與系統設計需求</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">高警報暴露 vs 低暴露組（經主題分析）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">四個核心主題：數位凝視、透過監控體驗患者惡化/死亡、監控相關壓力延伸至下班後、參與者描述的恢復與系統建議</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">間接創傷</span><span class="tag">醫護人員</span><span class="tag">ICU</span><span class="tag">警報疲勞</span><span class="tag">數位工作環境</span><span class="tag">質性研究</span><span class="tag">創傷知照護</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551007/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#8</span>
+            <span class="emoji-icon">🌿</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>德國、法國、中國ASR患者髮絲中endocannabinoid與社交退縮的關聯：低反應亞群的特徵性生物標誌</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Hair neuroendocrine signatures of acute stress reaction symptoms: Cross-national validation and latent profile heterogeneity.</p>
+          <p>AEA與社交功能受損及迴避行為在髮絲中強烈結合，且僅在低反應ASR亞群中出現，提示該生物特徵可能用於區分壓力反應類型與預後。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">來自法國、中國、德國的688名成年人</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">毛髮AEA濃度測量與ASR症狀評估</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">低反應ASR亞群 vs 高反應亞群（經LPA）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">AEA-避退行為橋接強度在低反應亞群中顯著最高；跨國內容調控差異顯著</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">endocannabinoid</span><span class="tag">壓力生物標誌</span><span class="tag">亞類分化</span><span class="tag">創傷反應</span><span class="tag">髮檢測</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551562/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='section'><div class='section-title'><span class='section-icon'>📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>美國老年創傷倖存者中修訂版感得分（SOC-R）作為metacognitive能力的結構穩定性：瑞士研究證據</h3>
+          <p class="journal-source">Psychotherapie, Psychosomatik, medizinische Psychologie</p>
+          <p>在老年創傷倖存者中，SOC-R顯示中等穩定性，其中應對與反思維度穩定性良好，成就動機顯著預測應對與反思能力，支持其為metacognitive特質的潛力。</p>
+          <div class="card-footer">
+            <span class="tag">SOC-R</span><span class="tag">metacognitive</span><span class="tag">老年創傷</span><span class="tag">瑞士研究</span><span class="tag">結構方程模型</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42551480/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">☀️</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>透過分層有機光伏納入高遷移率晶體穴傳輸材料提升效率：超過20.1%轉換紀錄</h3>
+          <p class="journal-source">Small (Weinheim an der Bergstrasse, Germany)</p>
+          <p>在供體與受體層中摻入高穴遷移率、高晶晶性C8-BTBT，使層壓有機光伏效率從19.10%提升至20.11%，證明材料協同優化策略的有效性。</p>
+          <div class="card-footer">
+            <span class="tag">有機光伏</span><span class="tag">材料科學</span><span class="tag">能源轉換</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42549756/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>兒童虐待對神經共情網路的影響：跨診斷fMRI研究證實同理心受損為核心機制</h3>
+          <p class="journal-source">European archives of psychiatry and clinical neuroscience</p>
+          <p>研究發現童年虐待與同理心相關的 dorsomedial 前葉皮質活動呈負相關，但與心智理論網路無關，支持同理心受損為童年創傷導致精神病理的跨診斷機制。</p>
+          <div class="card-footer">
+            <span class="tag">童年虐待</span><span class="tag">同理心</span><span class="tag">解離</span><span class="tag">創傷知情照護</span><span class="tag">橫斷診斷</span><span class="tag">fMRI</span><span class="tag">PTSD</span><span class="tag">MDD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42550193/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class='topic-section section'><div class='section-title'><span class='section-icon'>📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">複雜性創傷/CPTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:0%"></div></div>
+              <span class="topic-count">0</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">解離</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">童年創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">4</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">人際創傷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:50%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:75%"></div></div>
+              <span class="topic-count">3</span>
+            </div></div>
+
+  <div class='keywords-section section'><div class='section-title'><span class='section-icon'>🔑</span>關鍵字</div><div class='keywords'><span class="keyword">童年虐待</span><span class="keyword">解離</span><span class="keyword">PTSD</span><span class="keyword">創傷知情照護</span><span class="keyword">間接創傷</span><span class="keyword">囚犯創傷</span><span class="keyword">醫護人員創傷</span><span class="keyword">endocannabinoid</span><span class="keyword">SOC-R</span><span class="keyword">有機光伏</span></div></div>
+
+  <div class="clinic-banner">
+    <div class="clinic-links">
+      <a href="https://www.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">🏥</span>
+        <div>
+          <div class="clinic-name">李政洋身心診所首頁</div>
+          <div class="clinic-desc">專業身心科門診服務</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+      <a href="https://blog.leepsyclinic.com/" class="clinic-link" target="_blank">
+        <span class="clinic-icon">📨</span>
+        <div>
+          <div class="clinic-name">訂閱電子報</div>
+          <div class="clinic-desc">定期接收最新心理健康資訊</div>
+        </div>
+        <span class="clinic-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/complex-trauma-brain">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
