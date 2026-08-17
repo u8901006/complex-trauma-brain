@@ -10,7 +10,6 @@ on:
         required: false
         default: ""
 
-# Minimum permissions required for the workflow
 permissions:
   contents: write
 
@@ -76,10 +75,24 @@ jobs:
             echo "No papers found, will generate empty report"
           fi
 
+      - name: Guard empty topic distribution
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/generate_report.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace(
+              'max_count = max(topic_dist.values()) if topic_dist else 1',
+              'max_count = max(1, max(topic_dist.values(), default=0))'
+          )
+          p.write_text(s, encoding='utf-8')
+          PY
+
       - name: Generate report with NVIDIA Nemotron
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: |
+          test -n "$NVIDIA_API_KEY" || { echo "::error::Missing NVIDIA_API_KEY repository secret"; exit 1; }
           python scripts/generate_report.py \
             --input papers.json \
             --output docs/complex-trauma-${{ steps.date.outputs.target }}.html \
